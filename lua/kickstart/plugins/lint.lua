@@ -4,6 +4,8 @@ vim.pack.add { 'https://github.com/mfussenegger/nvim-lint' }
 
 local lint = require 'lint'
 lint.linters_by_ft = {
+  c = { 'clangtidy' },
+  cpp = { 'clangtidy' },
   markdown = { 'markdownlint' }, -- Make sure to install `markdownlint` via mason / npm
 }
 
