@@ -4,10 +4,10 @@ vim.pack.add { 'https://github.com/mfussenegger/nvim-lint' }
 
 local lint = require 'lint'
 lint.linters_by_ft = {
-  c = { 'cppcheck' }, -- Make sure to install `cppcheck`
-  cpp = { 'cppcheck' }, -- Make sure to install `cppcheck`
-  markdown = { 'markdownlint' }, -- Make sure to install `markdownlint` via mason / npm
-  python = { 'ruff' }, -- Make sure to install `ruff`
+  c = { 'cpplint' },
+  cpp = { 'cpplint' },
+  markdown = { 'markdownlint' },
+  python = { 'ruff' },
 }
 
 -- To allow other plugins to add linters to require('lint').linters_by_ft,
