@@ -8,6 +8,7 @@ lint.linters_by_ft = {
   cpp = { 'cpplint' },
   markdown = { 'markdownlint' },
   python = { 'ruff' },
+  json = { "jsonlint" },
 }
 
 -- To allow other plugins to add linters to require('lint').linters_by_ft,
