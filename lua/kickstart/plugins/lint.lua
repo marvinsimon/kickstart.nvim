@@ -4,9 +4,13 @@ vim.pack.add { 'https://github.com/mfussenegger/nvim-lint' }
 
 local lint = require 'lint'
 lint.linters_by_ft = {
-  javascript = { 'eslint_d' }, -- `eslint_d` is installed via mason-tool-installer in init.lua
-  javascriptreact = { 'eslint_d' }, -- `eslint_d` is installed via mason-tool-installer in init.lua
-  markdown = { 'markdownlint' }, -- Make sure to install `markdownlint` via mason / npm
+  c = { 'cpplint' },
+  cpp = { 'cpplint' },
+  javascript = { 'eslint_d' }, -- `eslint_d` is installed via mason-tool-installer in lua/plugins/lsp.lua
+  javascriptreact = { 'eslint_d' }, -- `eslint_d` is installed via mason-tool-installer in lua/plugins/lsp.lua
+  markdown = { 'markdownlint' },
+  python = { 'ruff' },
+  json = { 'jsonlint' },
 }
 
 -- To allow other plugins to add linters to require('lint').linters_by_ft,
