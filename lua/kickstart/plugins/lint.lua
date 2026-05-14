@@ -4,6 +4,8 @@ vim.pack.add { 'https://github.com/mfussenegger/nvim-lint' }
 
 local lint = require 'lint'
 lint.linters_by_ft = {
+  javascript = { 'eslint_d' }, -- Make sure to install `eslint_d` via mason / npm
+  javascriptreact = { 'eslint_d' }, -- Make sure to install `eslint_d` via mason / npm
   markdown = { 'markdownlint' }, -- Make sure to install `markdownlint` via mason / npm
 }
 
