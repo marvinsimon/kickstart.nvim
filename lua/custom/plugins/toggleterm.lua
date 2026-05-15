@@ -45,7 +45,7 @@ vim.keymap.set('n', '<leader>tv', '<cmd>ToggleTerm direction=vertical<cr>', { de
 vim.keymap.set('n', '<leader>tf', '<cmd>ToggleTerm direction=float<cr>', { desc = '[T]erminal [F]loat' })
 
 -- Terminal mode keymaps for easier navigation
-function _G.set_terminal_keymaps()
+local function set_terminal_keymaps()
   local opts = { buffer = 0 }
   vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
   vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
@@ -56,4 +56,9 @@ function _G.set_terminal_keymaps()
 end
 
 -- Automatically apply terminal keymaps when opening a terminal
-vim.cmd 'autocmd! TermOpen term://*toggleterm#* lua set_terminal_keymaps()'
+vim.api.nvim_create_autocmd('TermOpen', {
+  desc = 'Set terminal keymaps for toggleterm',
+  group = vim.api.nvim_create_augroup('toggleterm-keymaps', { clear = true }),
+  pattern = 'term://*toggleterm#*',
+  callback = set_terminal_keymaps,
+})
