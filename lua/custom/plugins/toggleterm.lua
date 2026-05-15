@@ -20,7 +20,7 @@ require('toggleterm').setup {
   open_mapping = [[<c-\>]], -- Key binding to toggle terminal
   hide_numbers = true, -- Hide the number column in toggleterm buffers
   shade_terminals = true,
-  shading_factor = 2, -- The degree by which to darken to terminal color
+  shading_factor = 2, -- The degree by which to darken the terminal color
   start_in_insert = true,
   insert_mappings = true, -- Whether or not the open mapping applies in insert mode
   terminal_mappings = true, -- Whether or not the open mapping applies in the opened terminals
